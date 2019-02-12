@@ -1,0 +1,16 @@
+---
+# GPU Server Configuration
+
+# NVIDIA GPU Driver configuration
+nv_gpu_apt_repo_url: ppa:graphics-drivers/ppa
+
+# Docker Configuration
+daemon_json:
+  bip: 192.168.99.1/24
+  default-runtime: nvidia
+  insecure-registries:
+    - "registry.local"
+  runtimes:
+    nvidia:
+      path: /usr/bin/nvidia-container-runtime
+      runtimeArgs: []
