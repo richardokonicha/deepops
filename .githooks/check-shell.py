@@ -27,6 +27,6 @@ def run_lint(paths):
 
 
 if __name__ == "__main__":
-    paths = get_changed_shell_paths()
-    if len(paths) > 0:
-        sys.exit(run_lint(paths))
+    changed = get_changed_shell_paths()
+    if len(changed) > 0:
+        sys.exit(run_lint(changed))
