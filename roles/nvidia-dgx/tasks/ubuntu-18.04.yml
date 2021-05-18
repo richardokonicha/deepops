@@ -5,7 +5,7 @@
   when: ansible_distribution_version != "18.04"
 
 - name: include os specific variables
-  include_vars: ubuntu.yml
+  include_vars: ubuntu-18.04.yml
 
 - name: include DGXA100 specific variables
   include_vars: dgxa100.yml
